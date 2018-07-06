@@ -2,16 +2,17 @@
 <nav class="navbar-default navbar-static-side" role="navigation">
     <div class="sidebar-collapse">
       <!-- side-menu -->
-      <ul class="nav" id="side-menu">
+      <ul class="nav" id="side-menu" style="background: #E71D36; position: fixed">
           <li>
               <!-- user image section-->
-              <div class="user-section " style="background: rgba(74, 72, 126, 0)">
+              <div class="user-section " style="background: #E71D36;
+              ">
                   <div class="user-section-inner">
                       <img src="./assets/template/img/user.jpg" alt="">
                   </div>
-                  <div class="user-info">
-                      <div>Văn 
-                          <strong>Khoa</strong>
+                  <div class="user-info" style="color: white">
+                      <div style="color: white">Văn 
+                          <strong style="color: white">Khoa</strong>
                       </div>
                       <div class="user-text-online">
                           <span class="user-circle-online btn btn-success btn-circle "></span>&nbsp;Online
@@ -33,53 +34,54 @@
               <!--end search section-->
           <!-- </li> -->
           <li class="selected" style="background: rgba(74, 72, 126, 0)">
-              <a href="#">
-                  <i class="fa fa-dashboard fa-fw" ></i> Quản Lí Bán Hàng
-                  <span class="fa arrow"></span>
+              <a [routerLink]= "['banhang']">
+                <i class="fa fa-bar-chart-o fa-fw"></i>  Quản Lí Bán Hàng
                 </a>
-                
-                  <ul class="nav nav-second-level">
-                    <li>
-                        <a href="flot.html">Hello</a>
-                    </li>
-                  </ul>  
           </li>
           <li>
-              <a href="#">
+              <a [routerLink]= "['nhaphang']" >
                   <i class="fa fa-bar-chart-o fa-fw"></i> Quản Lí Nhập Hàng
-                  <span class="fa arrow"></span>
               </a>
-              <ul class="nav nav-second-level">
+              <!-- <ul class="nav nav-second-level">
                   <li>
-                      <a href="flot.html">Hello</a>
+                      <a href="#">Hello</a>
                   </li>
                  
-              </ul>
+              </ul> -->
               <!-- second-level-items -->
           </li>
           <li>
-              <a (click)="changeLink()">
+              <a [routerLink]= "['hangtonkho']">
                   <i class="fa fa-flask fa-fw"></i>Hàng Tồn Kho</a>
           </li>
           <li>
-              <a href="tables.html">
+              <a href="" [routerLink]= "['thongkechitieu']" >
                   <i class="fa fa-table fa-fw"></i>Thống Kê Lợi Nhuận</a>
           </li>
           <li>
-              <a href="forms.html">
+              <a href=""  [routerLink]= "['hoadonbanhang']">
                   <i class="fa fa-edit fa-fw"></i>Hóa Đơn Bán Hàng</a>
           </li>
           <li>
-              <a href="#">
+            <a href="" [routerLink]="['doanhmucsanpham']">
+                <i class="fa fa-edit fa-fw"></i>Danh Mục Sản Phẩm
+                <span class="fa arrow"></span>
+            </a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="#" [routerLink]="['themdanhmucsanpham']">Thêm Danh Mục Sản Phẩm</a>
+                    </li>
+                   
+                </ul>
+        </li>
+          <li>
+              <a href="#" [routerLink]= "['nhaphanphoi']">
                   <i class="fa fa-wrench fa-fw"></i> Nhà Phân Phối
                   <span class="fa arrow"></span>
               </a>
               <ul class="nav nav-second-level">
                   <li>
-                      <a href="panels-wells.html">Thêm NPP</a>
-                  </li>
-                  <li>
-                      <a href="buttons.html">Xóa NPP</a>
+                      <a href="" [routerLink]= "['themnhaphanphoi']">Thêm NPP</a>
                   </li>
                   <!-- <li>
                       <a href="notifications.html">Notifications</a>
