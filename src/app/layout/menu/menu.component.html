@@ -1,18 +1,18 @@
 <!-- sidebar-collapse -->
-<nav class="navbar-default navbar-static-side" role="navigation">
+<nav *ngIf="user" class="navbar-default navbar-static-side" role="navigation">
     <div class="sidebar-collapse">
       <!-- side-menu -->
-      <ul class="nav" id="side-menu" style="background: #E71D36; position: fixed">
+      <ul class="nav" id="side-menu" style="background:rgb(83, 163, 163); position: fixed">
           <li>
               <!-- user image section-->
-              <div class="user-section " style="background: #E71D36;
+              <div class="user-section " style="background: rgb(83, 163, 163);
               ">
                   <div class="user-section-inner">
                       <img src="./assets/template/img/user.jpg" alt="">
                   </div>
                   <div class="user-info" style="color: white">
-                      <div style="color: white">Văn 
-                          <strong style="color: white">Khoa</strong>
+                      <div style="color: white"> 
+                          <strong style="color: white">{{user.name}}</strong>
                       </div>
                       <div class="user-text-online">
                           <span class="user-circle-online btn btn-success btn-circle "></span>&nbsp;Online

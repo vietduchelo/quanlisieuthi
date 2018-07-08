@@ -1,18 +1,15 @@
 import { Injectable } from '@angular/core';
-import {CanActivate, Router} from '@angular/router';
-import {LocalStorageService} from 'angular-2-local-storage'
+import { CanActivate, Router } from '@angular/router';
+import { LocalStorageService } from 'angular-2-local-storage'
 @Injectable({
   providedIn: 'root'
 })
-export class LoginService {
+export class LoginService implements CanActivate {
+  constructor() { }
 
-  constructor(private router : Router, private canActivate: CanActivate, private localStrorage : LocalStorageService) { }
-CanActivate(){
-  const login = this.localStrorage.get('token');
-    if (!login) {
-      this.router.navigate(['/login']);
-    }
-    return login ? true : false;
+  canActivate() {
+    const checkToken = localStorage.getItem('x');
+    return checkToken? true: false;
   }
 }
 
